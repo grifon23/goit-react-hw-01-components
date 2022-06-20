@@ -1,0 +1,8 @@
+.itemFriend{
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+.status{}
+.name{}
