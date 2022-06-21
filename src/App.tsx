@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
-import { FriendList, Profile, Statistics } from "./components";
-import { dataStats, dataUser, friendsData } from "./dataJSON";
+import {
+  FriendList,
+  Profile,
+  Statistics,
+  TransactionHistory,
+} from "./components";
+import { dataStats, dataUser, friendsData, transactionsData } from "./dataJSON";
 function App() {
   const { username, tag, avatar, location, stats } = dataUser;
   return (
@@ -12,7 +17,6 @@ function App() {
         justifyContent: "space-around",
         flexWrap: "wrap",
         scrollBehavior: "auto",
-        overflow: "scroll",
         height: "100vh",
         padding: 30,
       }}
@@ -26,6 +30,7 @@ function App() {
       />
       <Statistics title="Upload stats" stats={dataStats} />
       <FriendList friends={friendsData} />
+      <TransactionHistory transactions={transactionsData} />
     </div>
   );
 }
